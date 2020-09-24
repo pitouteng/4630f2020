@@ -14,10 +14,11 @@
 <!--        android:background="@color/lightPurple"-->
 <!--        app:layout_anchor="@+id/constraintLayout"-->
 <!--        app:layout_anchorGravity="center" />-->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="24dp"
+        android:background="@color/lightPurple"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -25,17 +26,17 @@
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingBottom="48dp"
             app:layout_anchor="@+id/constraintLayout"
             app:layout_anchorGravity="center">
 
 
             <ImageView
                 android:id="@+id/selfie"
-                android:layout_width="259dp"
-                android:layout_height="275dp"
-                android:layout_marginTop="24dp"
+                android:layout_width="231dp"
+                android:layout_height="269dp"
+                android:layout_marginTop="72dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.515"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/selfie" />
@@ -206,11 +207,6 @@
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toEndOf="@+id/amazonText"
                 app:layout_constraintTop_toBottomOf="@+id/apple" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
