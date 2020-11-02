@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+
+    <string name="school">University of Massachusetts Lowell</string>
+    <string name="work">Big Data Intern at Hewlett Packard Enterprise</string>
+    <string name="title">Investment Portfolio</string>
+    <string name="birthplace">born in PhnomPenh, Cambodia </string>
+    <string name="livenow">live in Lowell, MA </string>
+    <string name="likelive">like to live in Boston, MA </string>
+
+</resources>
