@@ -19,9 +19,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:background="@color/lightPurple"
         app:layout_anchor="@+id/scrollView2"
         app:layout_anchorGravity="center"
+=======
+        android:layout_marginBottom="24dp"
+>>>>>>> parent of ff05623... add better bottom space and add light purple background
 =======
         android:layout_marginBottom="24dp"
 >>>>>>> parent of ff05623... add better bottom space and add light purple background
@@ -33,8 +37,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             android:paddingBottom="48dp"
+=======
+>>>>>>> parent of ff05623... add better bottom space and add light purple background
 =======
 >>>>>>> parent of ff05623... add better bottom space and add light purple background
             app:layout_anchor="@+id/constraintLayout"
@@ -44,9 +51,15 @@
             <ImageView
                 android:id="@+id/selfie"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:layout_width="231dp"
                 android:layout_height="269dp"
                 android:layout_marginTop="16dp"
+=======
+                android:layout_width="259dp"
+                android:layout_height="275dp"
+                android:layout_marginTop="24dp"
+>>>>>>> parent of ff05623... add better bottom space and add light purple background
 =======
                 android:layout_width="259dp"
                 android:layout_height="275dp"
@@ -237,6 +250,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/randNumButton"
                 app:layout_constraintTop_toBottomOf="@+id/websiteButton" />
+
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
 
             <Space
