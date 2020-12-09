@@ -16,9 +16,12 @@
 <!--        app:layout_anchorGravity="center" />-->
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/lightPurple"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="center"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -26,16 +29,17 @@
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             android:paddingBottom="48dp"
             app:layout_anchor="@+id/constraintLayout"
-            app:layout_anchorGravity="center">
-
+            app:layout_anchorGravity="center"
+            tools:ignore="DuplicateIds">
 
             <ImageView
                 android:id="@+id/selfie"
                 android:layout_width="231dp"
                 android:layout_height="269dp"
-                android:layout_marginTop="72dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -58,157 +62,172 @@
 
             <!-- The text that goes in a center of the chart -->
 
-            <TextView
-                android:id="@+id/school"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/school"
-                android:textSize="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/name" />
-
-            <TextView
-                android:id="@+id/work"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/work"
-                android:textSize="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.49"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/school" />
-
-            <ProgressBar
-                android:id="@+id/apple"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="100"
-                android:progressDrawable="@drawable/apple"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/factsCard"
+                android:layout_width="365dp"
+                android:layout_height="177dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.486"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintVertical_bias="0.000" />
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                app:layout_constraintVertical_bias="0.0">
 
-            <ProgressBar
-                android:id="@+id/zoom"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="95"
-                android:progressDrawable="@drawable/zoom"
-                app:layout_constraintBottom_toBottomOf="parent"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/investmentContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    app:layout_anchor="@+id/constraintLayout"
+                    app:layout_anchorGravity="center">
+
+                    <TextView
+                        android:id="@+id/school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/school"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.495"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/work"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.488"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/school" />
+
+                    <TextView
+                        android:id="@+id/birthplace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/birthplace"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.496"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/work" />
+
+                    <TextView
+                        android:id="@+id/livenow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/livenow"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/birthplace" />
+
+                    <TextView
+                        android:id="@+id/likelive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/likelive"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/livenow" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/investmentButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="366dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:background="#EEECF3"
+                android:text="Investment Porfolio"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/factsCard" />
 
-            <ProgressBar
-                android:id="@+id/amazon"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="80"
-                android:progressDrawable="@drawable/amazon"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <Button
+                android:id="@+id/weatherButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="366dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:background="#EEECF3"
+                android:text="Weather"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintHorizontal_bias="0.511"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/investmentButton" />
 
-            <ProgressBar
-                android:id="@+id/tesla"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="55"
-                android:progressDrawable="@drawable/tesla"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <Button
+                android:id="@+id/resumeButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="366dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:background="#EEECF3"
+                android:text="Resume"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/weatherButton" />
 
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="236dp"
-                android:layout_height="33dp"
-                android:layout_marginTop="56dp"
-                android:text="@string/title"
-                android:textSize="25dp"
+            <Button
+                android:id="@+id/websiteButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="366dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:background="#EEECF3"
+                android:text="Website"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.444"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/work" />
+                app:layout_constraintTop_toBottomOf="@+id/resumeButton" />
 
-            <TextView
-                android:id="@+id/teslaText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginLeft="44dp"
-                android:layout_marginTop="12dp"
-                android:background="@color/purple"
-                android:text="Tesla"
+            <Button
+                android:id="@+id/randNumButton"
+                android:layout_width="193dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="28dp"
+                android:background="#EEECF3"
+                android:text="Generate"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/apple" />
+                app:layout_constraintTop_toBottomOf="@+id/websiteButton" />
 
-            <TextView
-                android:id="@+id/amazonText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:background="@color/colorAccent"
-                android:text="Amazon"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <EditText
+                android:id="@+id/numBox"
+                android:layout_width="154dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.577"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/apple"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toEndOf="@+id/randNumButton"
+                app:layout_constraintTop_toBottomOf="@+id/websiteButton" />
 
-            <TextView
-                android:id="@+id/zoomText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:background="@color/pink"
-                android:text="Zoom"
-                app:layout_constraintEnd_toStartOf="@+id/amazonText"
-                app:layout_constraintHorizontal_bias="0.521"
-                app:layout_constraintStart_toEndOf="@+id/teslaText"
-                app:layout_constraintTop_toBottomOf="@+id/apple" />
-
-            <TextView
-                android:id="@+id/appleText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:background="@color/orange"
-                android:text="Apple"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.504"
-                app:layout_constraintStart_toEndOf="@+id/amazonText"
-                app:layout_constraintTop_toBottomOf="@+id/apple" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 
 
